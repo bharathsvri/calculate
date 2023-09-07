@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+ <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+<body>
+ <form name="form1">
+<input type="text" name="int"><br><br>
+<input type="button" value="1" onclick="form1.int.value+=1">
+<input type="button" value="2" onclick="form1.int.value+=2">
+<input type="button" value="3"
+onclick="form1.int.value+=3"><br><br>
+
+<input type="button" value="4" onclick="form1.int.value+='4'">
+<input type="button" value+="5" onclick="form1.int.value='5'">
+<input type="button" value="6" onclick="form1.int.value+='6'"><br><br>
+
+<input type="button" value="7" onclick="form1.int.value+='7'">
+<input type="button" value="8" onclick="form1.int.value='8'">
+<input type="button" value="9" onclick="form1.int.value+='9'"><br><br>
+
+<input type="button" value="0" onclick="form1.int.value+='0'">
+
+<br><br>
+
+<input type="button" value="+" onclick="form1.int.value+='+'">
+<input type="button" value="-" onclick="form1.int.value+='-'">
+<input type="button" value="*"
+onclick="form1.int.value+='*'">
+<input type="button" value="/"
+onclick="form1.int.value+='/'">
+
+<br><br>
+
+<input type="button" value="." onclick="form1.int.value+='.'">
+<input type="button" value="=" onclick="form1.int.value=eval(form1.int.value)"><br><br>
+<input type="button" value="clear" onclick="form1.int.value=''">
+
+</form>
+</body>
+
+  </html>
