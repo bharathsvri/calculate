@@ -1,47 +1,86 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+        form{
+            background-color: rgb(12, 34, 56);
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 30px;
+            border-radius: 20px;
+            display: grid;
+            place-content: center;
+            gap: 20px;
+            grid-template-columns: 1fr 1fr 1fr;
+            border: 1px solid black;
+            padding: 20px;
+        }
 
-<head>
- <meta name="viewport" content="width=device-width, initial-scale=1" />
-</head>
+        .value{
+            grid-column: 1/4;
+            height: 40px;
+            font-size: 30px;
+        }
 
-<body>
- <form name="form1">
-<input type="text" name="int"><br><br>
-<input type="button" value="1" onclick="form1.int.value+=1">
-<input type="button" value="2" onclick="form1.int.value+=2">
-<input type="button" value="3"
-onclick="form1.int.value+=3"><br><br>
+        input[type="button"]{
+            height: 40px;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-<input type="button" value="4" onclick="form1.int.value+='4'">
-<input type="button" value="5" onclick="form1.int.value+=5">
-<input type="button" value="6" onclick="form1.int.value+='6'"><br><br>
+    </style>
+  </head>
 
-<input type="button" value="7" onclick="form1.int.value+='7'">
-<input type="button" value="8" onclick="form1.int.value+=8">
-<input type="button" value="9" onclick="form1.int.value+='9'"><br><br>
+  <body>
+    <form id="form1">
+      <input type="text" name="int" class="value" />
+      <input type="button" value="1" onclick="form1.int.value+=1" />
+      <input type="button" value="2" onclick="form1.int.value+=2" />
+      <input type="button" value="3" onclick="form1.int.value+=3" />
 
-<input type="button" value="0" onclick="form1.int.value+='0'">
+      <input type="button" value="4" onclick="form1.int.value+='4'" />
+      <input type="button" value="5" onclick="form1.int.value+=5" />
+      <input
+        type="button"
+        value="6"
+        onclick="form1.int.value+='6'" />
 
-<br><br>
+      <input type="button" value="7" onclick="form1.int.value+='7'" />
+      <input type="button" value="8" onclick="form1.int.value+=8" />
+      <input
+        type="button"
+        value="9"
+        onclick="form1.int.value+='9'"
+      />
 
-<input type="button" value="+" onclick="form1.int.value+='+'">
-<input type="button" value="-" onclick="form1.int.value+='-'">
-<input type="button" value="*"
-onclick="form1.int.value+='*'">
-<input type="button" value="/"
-onclick="form1.int.value+='/'">
+      <input type="button" value="0" onclick="form1.int.value+='0'" />
+      <input type="button" value="+" onclick="form1.int.value+='+'" />
+      <input type="button" value="-" onclick="form1.int.value+='-'" />
+      <input type="button" value="*" onclick="form1.int.value+='*'" />
+      <input type="button" value="/" onclick="form1.int.value+='/'" />
+      <input type="button" value="." onclick="form1.int.value+='.'" />
+      <input
+        type="button"
+        value="="
+        onclick="form1.int.value=eval(form1.int.value)"
+      />
+      <input type="button" value="clear" onclick="form1.int.value=''" />
 
-<br><br>
-
-<input type="button" value="." onclick="form1.int.value+='.'">
-<input type="button" value="=" onclick="form1.int.value=eval(form1.int.value)"><br><br>
-<input type="button" value="clear" onclick="form1.int.value=''">
-
-<input type="button" value="Delete"
-onclick="form1.int.value=form1.int.value.slice(0,-1)">
-
-</form>
-</body>
-
+      <input
+        type="button"
+        value="Delete"
+        onclick="form1.int.value=form1.int.value.slice(0,-1)"
+      />
+    </form>
+  </body>
 </html>
